@@ -1,0 +1,30 @@
+{
+  "name": "i18next-ssg",
+  "version": "1.0.0",
+  "description": "i18n ssg demo",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "next dev",
+    "json": "rm -rf ./public/json && ts-node ./bin/json.ts",
+    "build": "next build && next export -o build",
+    "start": "next build && next start"
+  },
+  "keywords": [
+    "yrobot",
+    "i18n",
+    "ssg",
+    "next.js"
+  ],
+  "author": "yrobot",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^12.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.17",
+    "@types/react": "^18.0.19",
+    "typescript": "^4.8.3"
+  }
+}
