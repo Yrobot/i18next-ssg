@@ -2,6 +2,8 @@ const { version } = require("./package.json");
 const { i18n } = require("./i18next-ssg.config");
 const { locales, defaultLocale } = i18n;
 
+const getPathArr = (path) => path.split("/").filter((v) => !!v);
+
 module.exports = {
   env: {
     NEXT_PUBLIC_VERSION: version,
@@ -33,7 +35,7 @@ module.exports = {
     locales.forEach((locale) => {
       Object.entries(defaultPathMap).forEach(
         ([key, { query = {}, ...res } = {}]) => {
-          i18nextPathMap[`/${locale}${key === "/" ? "" : key}`] = {
+          i18nextPathMap[`/${[locale, ...getPathArr(key)].join("/")}`] = {
             ...res,
             query: {
               ...query,
