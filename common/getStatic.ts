@@ -1,4 +1,3 @@
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { i18n } from "../i18next-ssg.config";
 
 export const getI18nPaths = () =>
@@ -15,9 +14,7 @@ export const getStaticPaths = () => ({
 
 export async function getI18nProps(ctx, ns = ["common"]) {
   const locale = ctx?.params?.locale;
-  let props = {
-    ...(await serverSideTranslations(locale, ns)),
-  };
+  let props = { locale, ns };
   return props;
 }
 
