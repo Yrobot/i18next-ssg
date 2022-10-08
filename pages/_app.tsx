@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>i18next-ssg</title>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta
           name="description"
           content="a demo which shows the i18n solution for next.js SSG"

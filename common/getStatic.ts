@@ -1,5 +1,5 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { i18n } from "../next-i18next.config";
+import { i18n } from "../i18next-ssg.config";
 
 export const getI18nPaths = () =>
   i18n.locales.map((lng) => ({
