@@ -1,15 +1,17 @@
 {
   "name": "i18next-ssg",
   "version": "1.0.0",
-  "description": "i18n ssg demo",
-  "main": "src/index.ts",
+  "description": "i18n ssg",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/types.d.ts",
   "scripts": {
-    "dev": "next dev",
-    "json": "rm -rf ./public/json && ts-node ./bin/json.ts",
-    "b": "next build",
-    "e": "next export -o build",
-    "build": "next build && next export -o build",
-    "start": "next build && next start"
+    "clean": "rm -rf dist && mkdir dist",
+    "build:es": "tsc ./src/index.ts --skipLibCheck --esModuleInterop --module es6 --moduleResolution node --outDir dist/es",
+    "build:cjs": "tsc ./src/index.ts --skipLibCheck --esModuleInterop --module commonjs --outDir dist/commonjs",
+    "build:types": "tsc --noEmit false --declaration --emitDeclarationOnly --outDir dist/types",
+    "build": "npm run clean && npm run build:cjs && npm run build:es && npm run build:types",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "yrobot",
@@ -21,8 +23,8 @@
   "license": "ISC",
   "dependencies": {
     "next": "^12.3.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "next-i18next": "^12.1.0",
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.7.17",
