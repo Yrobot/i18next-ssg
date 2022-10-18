@@ -4,14 +4,13 @@
   "description": "i18n ssg",
   "main": "dist/commonjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/types/types.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
-    "clean": "rm -rf dist && mkdir dist",
-    "build:es": "tsc ./src/index.ts --skipLibCheck --esModuleInterop --module es6 --moduleResolution node --outDir dist/es",
-    "build:cjs": "tsc ./src/index.ts --skipLibCheck --esModuleInterop --module commonjs --outDir dist/commonjs",
-    "build:types": "tsc --noEmit false --declaration --emitDeclarationOnly --outDir dist/types",
-    "build": "npm run clean && npm run build:cjs && npm run build:es && npm run build:types",
-    "prepublishOnly": "npm run build"
+    "clean": "rm -rf dist",
+    "build:es": "tsc --module es6 --moduleResolution node --outDir dist/esm",
+    "build:cjs": "tsc --module commonjs --outDir dist/commonjs",
+    "build": "yarn clean & yarn build:es & yarn build:cjs",
+    "prepublishOnly": "yarn build"
   },
   "keywords": [
     "yrobot",
@@ -27,6 +26,7 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
     "@types/node": "^18.7.17",
     "@types/react": "^18.0.21",
     "typescript": "^4.8.3"
