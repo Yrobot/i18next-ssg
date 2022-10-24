@@ -1,18 +1,22 @@
-import path from "path";
 import { Locale } from "./types";
 
-const DEFAULT_CONFIG_PATH = "./next-i18next.config.js";
+const CONFIG_PATH = "next-i18next.config.js";
 
-export type I18nConfig = {
-  defaultLocale: Locale;
-  locales: Locale[];
+export const get = () => {
+  return require(CONFIG_PATH);
 };
 
-const config: {
-  i18n: I18nConfig;
-} = require(path.resolve(DEFAULT_CONFIG_PATH));
+// export type I18nConfig = {
+//   defaultLocale: Locale;
+//   locales: Locale[];
+// };
 
-export const i18n = config.i18n;
+// const config: {
+//   i18n: I18nConfig;
+// } = require(path.resolve(CONFIG_PATH));
 
-export const locales = i18n.locales;
-export const defaultLocale = i18n.defaultLocale;
+// if (config?.i18n === undefined)
+//   throw new Error(`You have to define the 'i18n' in '${CONFIG_PATH}'`);
+
+// export const locales = config.i18n.locales;
+// export const defaultLocale = config.i18n.defaultLocale;

@@ -13,6 +13,7 @@
     "target": "es5",
     "module": "commonjs",
     "jsx": "react",
+    "removeComments": true
   },
   "files": [
     "src/index.ts"
