@@ -1,1 +1,1 @@
-export { serverSideTranslations } from "next-i18next/serverSideTranslations";
+export * from "next-i18next/serverSideTranslations";

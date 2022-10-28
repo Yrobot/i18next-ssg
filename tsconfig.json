@@ -10,8 +10,8 @@
       "ES2015",
       "DOM"
     ],
-    "target": "es5",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
     "jsx": "react",
     "removeComments": true
   },

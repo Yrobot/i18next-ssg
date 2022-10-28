@@ -2,9 +2,21 @@
   "name": "i18next-ssg",
   "version": "1.0.0",
   "description": "i18n ssg",
-  "main": "dist/commonjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "./dist/commonjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/commonjs/index.js"
+    },
+    "./serverSideTranslations": {
+      "types": "./dist/types/serverSideTranslations.d.ts",
+      "import": "./dist/esm/serverSideTranslations.js",
+      "require": "./dist/commonjs/serverSideTranslations.js"
+    }
+  },
   "scripts": {
     "clean": "rm -rf dist",
     "build:es": "tsc --module es6 --moduleResolution node --outDir dist/esm",
