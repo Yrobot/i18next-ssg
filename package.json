@@ -2,21 +2,9 @@
   "name": "i18next-ssg",
   "version": "1.0.0",
   "description": "i18n ssg",
-  "main": "./dist/commonjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/commonjs/index.js"
-    },
-    "./serverSideTranslations": {
-      "types": "./dist/types/serverSideTranslations.d.ts",
-      "import": "./dist/esm/serverSideTranslations.js",
-      "require": "./dist/commonjs/serverSideTranslations.js"
-    }
-  },
+  "main": "dist/commonjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
     "build:es": "tsc --module es6 --moduleResolution node --outDir dist/esm",
@@ -32,15 +20,20 @@
   ],
   "author": "yrobot",
   "license": "ISC",
-  "dependencies": {
-    "next": "^12.3.1",
-    "next-i18next": "^12.1.0",
-    "react": "^18.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
     "@types/node": "^18.7.17",
     "@types/react": "^18.0.21",
+    "next": "^13.0.0",
+    "next-i18next": "^12.1.0",
+    "react": "^18.2.0",
     "typescript": "^4.8.3"
+  },
+  "peerDependencies": {
+    "i18next": "^22.0.2",
+    "next": "^13.0.0",
+    "next-i18next": "^12.1.0",
+    "react": "^18.2.0"
   }
 }
