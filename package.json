@@ -7,7 +7,7 @@
   "types": "dist/types/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
-    "build:es": "tsc --module es6 --moduleResolution node --outDir dist/esm",
+    "build:es": "tsc --module es6 --outDir dist/esm",
     "build:cjs": "tsc --module commonjs --outDir dist/commonjs",
     "build": "yarn clean & yarn build:es & yarn build:cjs",
     "prepublishOnly": "yarn build"
@@ -25,14 +25,11 @@
     "@tsconfig/recommended": "^1.0.1",
     "@types/node": "^18.7.17",
     "@types/react": "^18.0.21",
-    "next": "^13.0.0",
     "next-i18next": "^12.1.0",
     "react": "^18.2.0",
     "typescript": "^4.8.3"
   },
   "peerDependencies": {
-    "i18next": "^22.0.2",
-    "next": "^13.0.0",
     "next-i18next": "^12.1.0",
     "react": "^18.2.0"
   }
