@@ -1,1 +1,1 @@
-module.exports = require("./dist/commonjs/serverSideTranslations.js");
+module.exports = require("./dist/commonjs/serverSideTranslations");

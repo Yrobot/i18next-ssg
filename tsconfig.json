@@ -18,7 +18,8 @@
   },
   "files": [
     "src/index.ts",
-    "src/serverSideTranslations.ts"
+    "src/serverSideTranslations.ts",
+    "src/Redirect.tsx"
   ],
   "exclude": [
     "node_modules",
