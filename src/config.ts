@@ -1,5 +1,3 @@
-import { Locale } from "./types";
-
 export type I18nConfig = {
   defaultLocale: Locale;
   locales: Locale[];

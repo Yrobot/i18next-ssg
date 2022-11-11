@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { getPathsArr, getUrlLocale, getLocale } from "./utilities";
 import { locales, defaultLocale } from "./config";
-import { Locale } from "./types";
 
 export const useRootPathRedirect = () => {
   const router = useRouter();

@@ -1,6 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { getPathsArr } from "../utilities";
 import { locales } from "../config";
+export * from "../types";
 
 const getI18nPaths = () =>
   locales.map((lng) => ({

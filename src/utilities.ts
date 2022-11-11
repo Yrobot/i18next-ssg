@@ -1,5 +1,4 @@
 import { locales, defaultLocale } from "./config";
-import { Locale } from "./types";
 
 const LOCAL_STORAGE_KEY = "__I18N_SET_LOCALE" as const;
 
