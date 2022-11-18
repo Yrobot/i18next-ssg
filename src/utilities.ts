@@ -11,6 +11,12 @@ export const getUrlLocale = (): Locale | null => {
   return null;
 };
 
+export const localize = (href: string): string => {
+  const locale = getUrlLocale();
+  if (locale) return `/${locale}/${href}`;
+  return href;
+};
+
 /**
  * @description get locale suggest based on the navigator.language
  * @doc Structure of navigator.language according to RFC 5646:
