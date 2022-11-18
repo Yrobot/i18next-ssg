@@ -1,7 +1,25 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import fs from "fs/promises";
+import path from "path";
+
 import { getPathsArr } from "../utilities";
 import { locales } from "../config";
 export * from "../types";
+
+export const readFilePaths = async (
+  base: string = "",
+  paths: string[] = []
+) => {
+  const files = await fs.readdir(base);
+  await Promise.all(
+    files.map(async (name) => {
+      const current = path.join(base, name);
+      const stat = await fs.stat(current);
+      if (stat.isFile()) paths.push(current);
+      if (stat.isDirectory()) await readFilePaths(current, paths);
+    })
+  );
+};
 
 const getI18nPaths = () =>
   locales.map((lng) => ({
@@ -28,12 +46,6 @@ export const makeStaticProps = (ns: string[] = []) =>
       props: await getI18nProps(ctx, ns),
     };
   };
-
-export async function getStaticProps() {
-  return {
-    props: {},
-  };
-}
 
 export const makeStaticPaths = (paths: string[]) =>
   async function getStaticPaths() {
