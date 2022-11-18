@@ -45,11 +45,6 @@ export const encodeI18nPath = (
   return `/${[locale, ...paths].join("/")}`;
 };
 
-export const useI18nRouterPush = () => {
-  const router = useRouter();
-  return (path: string) => router.push(encodeI18nPath(path));
-};
-
 export const useI18nPath = () => {
   const router = useRouter();
   return decodeI18nPath(router.asPath);
