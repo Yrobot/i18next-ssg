@@ -15,6 +15,7 @@ let config: {
 try {
   config = require("next-i18next.config.js");
 } catch (error) {
+  console.error(error);
   throw new Error(`You have to define the 'i18n' in 'next-i18next.config.js'`);
 }
 
