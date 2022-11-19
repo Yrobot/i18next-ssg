@@ -6,6 +6,7 @@ This is the Version record for i18next-ssg
 
 ### Added
 
+- add README.md
 - add static config read logic
   - locale
   - locales
