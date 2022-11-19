@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://yrobot.top/" target="_blank" rel="noopener noreferrer">
-    <img width="180" src="./i18next-ssg.svg" alt="logo">
+    <img width="180" src="https://images.yrobot.top/2022-11-19/i18next-ssg-10-33-34.svg" alt="logo">
   </a>
 </p>
 <br/>
@@ -123,7 +123,7 @@ First, create `[[...paths]].tsx` under the `pages` folder (i18next-ssg will auto
 
 `pages/[[...paths]].tsx`
 
-> copy pause the code directly, it will works fine for your project.
+> copy pause the code directly without any changes, it will works fine for your project.
 
 ```tsx
 export { getStaticProps, getStaticPaths } from "i18next-ssg/Redirect";
@@ -135,7 +135,7 @@ export default function Page() {
 }
 ```
 
-Then, the auto redirect logic works lick this:
+Then, the auto redirect logic works like this:
 
 - / => /[locale]
 - /second => /[locale]/second
