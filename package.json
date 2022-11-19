@@ -1,7 +1,7 @@
 {
   "name": "i18next-ssg",
   "version": "1.0.0",
-  "description": "i18n ssg",
+  "description": "i18n tool for next.js SSG",
   "main": "dist/commonjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
