@@ -1,3 +1,5 @@
+import path from "path";
+
 export type I18nConfig = {
   defaultLocale: Locale;
   locales: Locale[];
@@ -13,9 +15,8 @@ let config: {
 };
 
 try {
-  config = require("next-i18next.config.js");
+  config = require(path.resolve("./next-i18next.config.js"));
 } catch (error) {
-  console.error(error);
   throw new Error(`You have to define the 'i18n' in 'next-i18next.config.js'`);
 }
 
