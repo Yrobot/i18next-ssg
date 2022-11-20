@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://yrobot.top/" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/Yrobot/i18next-ssg" target="_blank" rel="noopener noreferrer">
     <img width="180" src="https://images.yrobot.top/2022-11-19/i18next-ssg-10-33-34.svg" alt="logo">
   </a>
 </p>
 <br/>
 <h2 align="center">
-  <a href="https://yrobot.top/">i18next-ssg</a>
+  <a href="https://github.com/Yrobot/i18next-ssg">i18next-ssg</a>
 </h2>
 <p align="center">
   The i18n tool for next.js ssg project.
@@ -17,7 +17,7 @@
 
 ## Demos
 
-- [Next.js SSG]()
+- [Next.js SSG](https://codesandbox.io/s/i18next-ssg-ozrpwx)
 
 ## How To Start
 

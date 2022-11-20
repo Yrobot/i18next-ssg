@@ -2,7 +2,18 @@
 
 This is the Version record for i18next-ssg
 
-## [1.0.0] - 2022-11-20
+## [1.1.0] - 2022-11-20
+
+### Fixed
+
+- Fix read config fail bug
+
+### Added
+
+- Update Readme
+- Update package.json
+
+## [1.0.0] - 2022-11-19
 
 ### Added
 

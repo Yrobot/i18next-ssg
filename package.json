@@ -2,6 +2,11 @@
   "name": "i18next-ssg",
   "version": "1.0.1",
   "description": "i18n tool for next.js SSG",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Yrobot/i18next-ssg.git"
+  },
+  "homepage": "https://github.com/Yrobot/i18next-ssg",
   "main": "dist/commonjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
