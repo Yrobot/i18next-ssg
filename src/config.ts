@@ -17,7 +17,7 @@ let config: {
 try {
   config = require(path.resolve("./next-i18next.config.js"));
 } catch (error) {
-  throw new Error(`You have to define the 'i18n' in 'next-i18next.config.js'`);
+  throw new Error(`Fail to read 'i18n' in 'next-i18next.config.js'`);
 }
 
 export const locales = config.i18n.locales;
