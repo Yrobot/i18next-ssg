@@ -1,24 +1,14 @@
-import path from "path";
-
 export type I18nConfig = {
-  defaultLocale: Locale;
-  locales: Locale[];
+  defaultLocale?: Locale;
+  locales?: Locale[];
 };
 
-let config: {
-  i18n: I18nConfig;
-} = {
-  i18n: {
-    locales: [],
-    defaultLocale: "en",
-  },
-};
+const i18n = process.env.i18n as I18nConfig;
 
-try {
-  config = require(path.resolve("./next-i18next.config.js"));
-} catch (error) {
-  throw new Error(`Fail to read 'i18n' in 'next-i18next.config.js'`);
-}
+if (i18n === undefined)
+  throw new Error(
+    `You have to export Environment Variables 'i18n' object in 'next.config.js'`
+  );
 
-export const locales = config.i18n.locales;
-export const defaultLocale = config.i18n.defaultLocale;
+export const locales = i18n.locales;
+export const defaultLocale = i18n.defaultLocale;
