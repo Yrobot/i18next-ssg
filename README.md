@@ -29,7 +29,9 @@ yarn add i18next-ssg next-i18next
 
 ### 2. Project Setup
 
-First, create a `next-i18next.config.js` file in the root of your project. The syntax for the nested i18n object comes from Next.js directly.
+First, create a `next-i18next.config.js` file in the root of your project.
+
+And You have to expose the `i18n` object as the next.js Environment Variables.
 
 `next-i18next.config.js`
 
@@ -38,6 +40,18 @@ module.exports = {
   i18n: {
     defaultLocale: "en",
     locales: ["en", "zh"],
+  },
+};
+```
+
+`next.config.js`
+
+```js
+const { i18n } = require("./next-i18next.config");
+
+module.exports = {
+  env: {
+    i18n,
   },
 };
 ```
@@ -167,6 +181,15 @@ After all these steps and run `yarn build` (`next build && next export -o build`
 ```
 
 ## Other Tricks
+
+### get your i18n config quickly
+
+```tsx
+import { config } from "i18next-ssg";
+
+console.log(config.locales);
+console.log(config.defaultLocale);
+```
 
 ### All functions exported from `next-i18next` or `react-i18next`
 
