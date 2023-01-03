@@ -10,5 +10,5 @@ if (i18n === undefined)
     `You have to export Environment Variables 'i18n' object in 'next.config.js'`
   );
 
-export const locales = i18n.locales;
-export const defaultLocale = i18n.defaultLocale;
+export const locales = i18n?.locales ?? [];
+export const defaultLocale = i18n?.defaultLocale ?? "";
