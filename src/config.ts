@@ -7,7 +7,7 @@ const PATH = path.resolve("./next-i18next.config.js");
 
 let i18n = process.env.NEXT_PUBLIC_I18N as I18nConfig;
 
-if (isServer) i18n = require(`${PATH}`)?.i18n as I18nConfig;
+if (isServer) i18n = require(PATH)?.i18n as I18nConfig;
 
 if (i18n === undefined)
   throw new Error(
