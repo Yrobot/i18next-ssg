@@ -13,7 +13,7 @@ export const getUrlLocale = (): Locale | null => {
 
 export const localize = (href: string): string => {
   const locale = getUrlLocale();
-  if (locale) return `/${locale}/${href}`;
+  if (locale) return `/${locale}${href}`;
   return href;
 };
 
