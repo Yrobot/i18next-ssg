@@ -24,25 +24,25 @@
 ### 1. Install `i18next-ssg`
 
 ```
-yarn add i18next-ssg next-i18next
+yarn add i18next-ssg next-i18next react-i18next i18next
 ```
 
 ### 2. Project Setup
 
 First, create a `next-i18next.config.js` file in the root of your project.
 
-And You have to expose the `i18n` object as the next.js Environment Variables.
-
 `next-i18next.config.js`
 
 ```js
 module.exports = {
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "zh"],
+    defaultLocale: "en", // the default language
+    locales: ["en", "zh"], // language list
   },
 };
 ```
+
+And You have to expose the `i18n` config as the next.js Environment Variable `NEXT_PUBLIC_I18N`.
 
 `next.config.js`
 
@@ -51,7 +51,7 @@ const { i18n } = require("./next-i18next.config");
 
 module.exports = {
   env: {
-    i18n,
+    NEXT_PUBLIC_I18N: i18n,
   },
 };
 ```
@@ -76,7 +76,7 @@ module.exports = {
 }
 ```
 
-If you want to structure your translations/namespaces in a custom way, you will need to pass modified `localePath` and `localeStructure` values into `next-i18next.config.js`.
+If you want to structure your translations/namespaces in a custom way, you will need to pass modified `localePath` and `localeStructure` values into `next-i18next.config.js`. Check detail here https://github.com/i18next/next-i18next#options
 
 ### 4. Wrap the app
 
@@ -183,6 +183,8 @@ After all these steps and run `yarn build` (`next build && next export -o build`
 ## Other Tricks
 
 ### get your i18n config quickly
+
+this work fine on both server and browser.
 
 ```tsx
 import { config } from "i18next-ssg";
