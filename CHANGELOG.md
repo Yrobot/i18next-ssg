@@ -2,6 +2,12 @@
 
 This is the Version record for i18next-ssg
 
+## [3.0.1] - 2023-01-11
+
+### Fixed
+
+- fix Invalid href with localize: `localize('/arya')` => `/zh/arya` not `/zh//arya`
+
 ## [3.0.0] - 2023-01-11
 
 ### Fixed
