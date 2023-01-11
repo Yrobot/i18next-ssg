@@ -1,4 +1,4 @@
-import { getPathsArr } from "../index";
+import { getPathsArr } from "../utilities";
 import { readFilePaths } from "./index";
 
 const LOCALE_PATH_PREFIX = "pages/[locale]";
