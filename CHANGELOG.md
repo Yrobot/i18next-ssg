@@ -2,11 +2,17 @@
 
 This is the Version record for i18next-ssg
 
-## [2.0.0] - 2023-01-03
+## [3.0.0] - 2023-01-11
 
 ### Fixed
 
 - fix all bugs, this is the basic working version for this repo. The version below are NOT working any more
+
+## [2.0.0] - [NOT WORKING] - 2023-01-03
+
+### Fixed
+
+- try to fix config bugs
 
 ## [1.1.0] - [NOT WORKING] - 2022-11-20
 
