@@ -7,6 +7,11 @@ This is the Version record for i18next-ssg
 ### Fixed
 
 - fix ts declaration link for Redirect
+- support pages under src dir: https://github.com/Yrobot/i18next-ssg/issues/3
+
+### Added
+
+- add some local test code
 
 ## [3.0.1] - 2023-01-11
 

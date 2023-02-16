@@ -4,3 +4,4 @@ src
 CHANGELOG.md
 tsconfig.json
 yarn.lock
+test

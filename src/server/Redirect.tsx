@@ -1,10 +1,15 @@
 import { getPathsArr } from "../utilities";
-import { readFilePaths } from "./index";
+import { readFilePaths, checkPathExists } from "./index";
 
-const LOCALE_PATH_PREFIX = "pages/[locale]";
 const END_FIX = "/index";
 
 const getPagePaths = async (): Promise<string[]> => {
+  // page files could under src dir
+  // https://nextjs.org/docs/advanced-features/src-directory
+  const LOCALE_PATH_PREFIX = (await checkPathExists("pages"))
+    ? "pages/[locale]"
+    : "src/pages/[locale]";
+
   let paths: string[] = [];
   await readFilePaths(LOCALE_PATH_PREFIX, paths);
   paths = paths.map((p) => {
