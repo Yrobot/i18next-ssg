@@ -2,6 +2,12 @@
 
 This is the Version record for i18next-ssg
 
+## [3.0.2] - 2023-02-16
+
+### Fixed
+
+- fix ts declaration link for Redirect
+
 ## [3.0.1] - 2023-01-11
 
 ### Fixed
