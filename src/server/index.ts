@@ -6,6 +6,18 @@ import { getPathsArr } from "../utilities";
 import { locales } from "../config";
 export * from "../types";
 
+export const checkPathExists = async (path: string): Promise<boolean> =>
+  new Promise(async (resolve) =>
+    fs
+      .access(path)
+      .then(() => {
+        resolve(true);
+      })
+      .catch(() => {
+        resolve(false);
+      })
+  );
+
 export const readFilePaths = async (
   base: string = "",
   paths: string[] = []
