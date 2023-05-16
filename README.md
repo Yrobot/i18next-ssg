@@ -17,8 +17,8 @@
 
 ## Demos
 
-- [Next.js SSG](https://codesandbox.io/p/github/Yrobot/DEMO_i18next-ssg/master)
-  - [Demo Repo](https://github.com/Yrobot/DEMO_i18next-ssg)
+- [Next.js SSG](https://codesandbox.io/p/github/yrobot-demo/i18next-ssg/master)
+  - [Demo Repo](https://github.com/yrobot-demo/i18next-ssg)
 
 ## How To Start
 
