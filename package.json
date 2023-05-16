@@ -6,6 +6,10 @@
     "type": "git",
     "url": "git@github.com:Yrobot/i18next-ssg.git"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "homepage": "https://github.com/Yrobot/i18next-ssg",
   "main": "dist/commonjs/index.js",
   "module": "dist/esm/index.js",
