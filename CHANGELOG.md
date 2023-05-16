@@ -2,6 +2,13 @@
 
 This is the Version record for i18next-ssg
 
+## [3.0.3] - 2023-05-16
+
+### Fixed
+
+- fix esm support
+- update demo code and link in README.md
+
 ## [3.0.2] - 2023-02-16
 
 ### Fixed
